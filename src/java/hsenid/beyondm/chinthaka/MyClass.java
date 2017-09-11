@@ -22,6 +22,7 @@ public class MyClass {
         selectGender();
         selectActivity();
         selectCaloric();
+        System.out.println("FINISHED");
 
     }
     static void selectAge(){
@@ -114,6 +115,7 @@ public class MyClass {
             System.out.println(" Estimated Caloric Needs - kcal/day");
             calory_need = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * years);
             System.out.println(" Saved: "+calory_need);
+
         }
 
 
