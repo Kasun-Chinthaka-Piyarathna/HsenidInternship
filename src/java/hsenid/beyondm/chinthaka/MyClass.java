@@ -14,31 +14,54 @@ public class MyClass {
     //TODO: Move constant values to constant variables
 
 
-    public static int years;
-    public static int weight;
-    public static int height;
-    public static boolean male;
-    public static boolean female;
-    public static double calory_need;
+    private  int years;
+    private int weight;
+    private int height;
+    private boolean male;
+    private boolean female;
+    private double calory_need;
+    private double m1=66.5;
+    private double m2=13.75;
+    private double m3=5.003;
+    private double m4=6.775;
+    private double fm1=655.1;
+    private double fm2=9.563;
+    private double fm3=1.850;
+    private double fm4=4.676;
+
+    /**
+     *
+     * @param args
+     */
+
     public static void main(String[] args){
 
+        MyClass obj = new MyClass();
 
-        selectAge();
-        selectWeight();
-        selectHeight();
-        selectGender();
-        selectActivity();
-        selectCaloric();
+        obj.selectAge();
+        obj.selectWeight();
+        obj.selectHeight();
+        obj.selectGender();
+        obj.selectActivity();
+        obj.selectCaloric();
         System.out.println("FINISHED");
 
     }
 
-    static void selectAge(){
+    /**
+     *@param null
+     */
+
+    private void selectAge(){
         System.out.println(" Enter Age in Years");
         years = new Scanner(System.in).nextInt();
         System.out.println(" Saved: "+years);
     }
-    static  void selectWeight(){
+
+    /**
+     *@param null
+     */
+    private   void selectWeight(){
         System.out.println(" Select suitable weight format");
         System.out.println(" kg -->1 lb-->2");
         String input1 = new Scanner(System.in).next();
@@ -56,7 +79,11 @@ public class MyClass {
             System.out.println(" Sorry You have chosen an invalid format");
         }
     }
-    static void selectHeight(){
+
+    /**
+     *@param null
+     */
+    private void selectHeight(){
         System.out.println(" Select suitable Height format");
         System.out.println(" cm-->1 or in-->2");
         String input2 = new Scanner(System.in).next();
@@ -75,7 +102,11 @@ public class MyClass {
         }
 
     }
-    static void selectGender(){
+
+    /**
+     *@param null
+     */
+    private void selectGender(){
 
         System.out.println(" Select suitable Patient Gender format");
         System.out.println(" Male -->1 or Female-->2");
@@ -91,7 +122,11 @@ public class MyClass {
             System.out.println(" Sorry You have chosen an invalid format");
         }
     }
-    static  void selectActivity(){
+
+    /**
+     *@param null
+     */
+    private  void selectActivity(){
 
         System.out.println(" Select suitable Activity Level format");
         System.out.println(" Sedentary -->1 || Lightly active -->2 || Moderately active -->3 || Very active -->4 || Heavy physical training -->5");
@@ -113,15 +148,20 @@ public class MyClass {
             System.out.println(" Sorry You have chosen an invalid format");
         }
     }
-    static void selectCaloric(){
+
+    /**
+     *@param null
+     */
+    private void selectCaloric(){
 
         if(male) {
+
             System.out.println(" Estimated Caloric Needs - kcal/day");
-            calory_need =  (66.5 + (13.75 * weight) + (5.003 * height) - (6.775 * years));
+            calory_need =  (m1 + (m2 * weight) + (m3 * height) - (m4 * years));
             System.out.println(" Saved: "+calory_need);
         }else{
             System.out.println(" Estimated Caloric Needs - kcal/day");
-            calory_need = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * years);
+            calory_need = fm1 + (fm2 * weight) + (fm3 * height) - (fm4 * years);
             System.out.println(" Saved: "+calory_need);
 
         }
