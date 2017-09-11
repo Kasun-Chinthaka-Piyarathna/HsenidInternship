@@ -7,6 +7,13 @@ import java.util.Scanner;
  */
 public class MyClass {
 
+    //TODO: Include javadocs for methods
+    //TODO: Make methods private as possible
+    //TODO: Avoid static methods
+    //TODO: Avoid static variables
+    //TODO: Move constant values to constant variables
+
+
     public static int years;
     public static int weight;
     public static int height;
@@ -25,6 +32,7 @@ public class MyClass {
         System.out.println("FINISHED");
 
     }
+
     static void selectAge(){
         System.out.println(" Enter Age in Years");
         years = new Scanner(System.in).nextInt();
