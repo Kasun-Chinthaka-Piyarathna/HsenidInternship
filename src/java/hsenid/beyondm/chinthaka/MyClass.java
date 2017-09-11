@@ -6,7 +6,15 @@ import java.util.Scanner;
  * Created by chinthaka on 9/11/17.
  */
 public class MyClass {
+
+    public static int years;
+    public static int weight;
+    public static int height;
+    public static boolean male;
+    public static boolean female;
+    public static double calory_need;
     public static void main(String[] args){
+
 
         selectAge();
         selectWeight();
@@ -18,7 +26,7 @@ public class MyClass {
     }
     static void selectAge(){
         System.out.println(" Enter Age in Years");
-        int years = new Scanner(System.in).nextInt();
+        years = new Scanner(System.in).nextInt();
         System.out.println(" Saved: "+years);
     }
     static  void selectWeight(){
@@ -27,13 +35,13 @@ public class MyClass {
         String input1 = new Scanner(System.in).next();
         if(input1.equals("1")){
             System.out.println(" Enter your weight");
-            int weight = new Scanner(System.in).nextInt();
+            weight = new Scanner(System.in).nextInt();
             System.out.println(" Saved: "+weight+" kg");
 
         }else if(input1.equals("2")){
 
             System.out.println(" Enter your weight");
-            int weight = new Scanner(System.in).nextInt();
+            weight = new Scanner(System.in).nextInt();
             System.out.println(" Saved: "+weight+" lb");
         }else{
             System.out.println(" Sorry You have chosen an invalid format");
@@ -45,13 +53,13 @@ public class MyClass {
         String input2 = new Scanner(System.in).next();
         if(input2.equals("1")){
             System.out.println(" Enter your height");
-            int height = new Scanner(System.in).nextInt();
+            height = new Scanner(System.in).nextInt();
             System.out.println(" Saved: "+height+" cm");
 
         }else if(input2.equals("2")){
 
             System.out.println(" Enter your height");
-            int height = new Scanner(System.in).nextInt();
+            height = new Scanner(System.in).nextInt();
             System.out.println(" Saved: "+height+" in");
         }else{
             System.out.println(" Sorry You have chosen an invalid format");
@@ -64,9 +72,11 @@ public class MyClass {
         System.out.println(" Male -->1 or Female-->2");
         String input3 = new Scanner(System.in).next();
         if(input3.equals("1")){
+            male=true;
             System.out.println(" Saved:  Male");
 
         }else if(input3.equals("2")){
+            female=true;
             System.out.println(" Saved:  Female");
         }else{
             System.out.println(" Sorry You have chosen an invalid format");
@@ -96,9 +106,18 @@ public class MyClass {
     }
     static void selectCaloric(){
 
-        System.out.println(" Estimated Caloric Needs - kcal/day");
-        int calory_need =  new Scanner(System.in).nextInt();
-        System.out.println(" Saved: "+calory_need);
+        if(male) {
+            System.out.println(" Estimated Caloric Needs - kcal/day");
+            calory_need =  (66.5 + (13.75 * weight) + (5.003 * height) - (6.775 * years));
+            System.out.println(" Saved: "+calory_need);
+        }else{
+            System.out.println(" Estimated Caloric Needs - kcal/day");
+            calory_need = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * years);
+            System.out.println(" Saved: "+calory_need);
+        }
+
+
+
     }
 
 }
