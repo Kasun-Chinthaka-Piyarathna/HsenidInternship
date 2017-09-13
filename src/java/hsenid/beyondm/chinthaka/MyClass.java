@@ -7,11 +7,8 @@ import java.util.Scanner;
  */
 public class MyClass {
 
-    //TODO: Include javadocs for methods
-    //TODO: Make methods private as possible
-    //TODO: Avoid static methods
-    //TODO: Avoid static variables
     //TODO: Move constant values to constant variables
+    //Ref: https://www.java-tips.org/java-se-tips-100019/24-java-lang/802-how-do-i-declare-a-constant-in-java.html
 
 
     private  int years;
